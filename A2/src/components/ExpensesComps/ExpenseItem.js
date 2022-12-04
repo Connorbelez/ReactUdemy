@@ -2,7 +2,7 @@
 //jsx is a js extension that allows us to write html in js
 import './ExpenseItem.css';
 import { ExpenseDate } from './ExpenseDate';
-import { Card } from './Card';
+import { Card } from '../UI/Card';
 export function ExpenseItem (props)
 {
 

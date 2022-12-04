@@ -1,5 +1,6 @@
 // import { ExpenseItem } from "./components/ExpenseItem";
-import { ExpenseItems } from "./components/ExpenseItems";
+import { ExpenseItems } from "./components/ExpensesComps/ExpenseItems";
+import React from "react";
 
 function App ()
 {
@@ -15,6 +16,14 @@ function App ()
   ];
 
   //passing props to ExpenseItem component
+  //Alternative way to create react component
+  // return React.createElement(
+  //   "div",
+  //   {},
+  //   React.createElement("h2", {}, "Let's get started!"),
+  //   React.createElement(ExpenseItems, { expenses: expenses })
+  // );
+
   return (
     <div>
       <h2>Let's get started!</h2>
