@@ -1,4 +1,4 @@
-import { ExpenseItem } from "./ExpenseItem";
+import { ExpenseItem, ExpenseItem1 } from "./ExpenseItem";
 import { Card } from "../UI/Card";
 import "./Expenses.css";
 
@@ -17,7 +17,7 @@ export function ExpenseItems (props)
                 amount={props.expenses[1].amount}
                 date={props.expenses[1].date}
             ></ExpenseItem> */}
-            <ExpenseItem expenseInfo={props.expenses[0]}></ExpenseItem>
+            <ExpenseItem1 expenseInfo={props.expenses[0]}></ExpenseItem1>
             <ExpenseItem expenseInfo={props.expenses[1]}></ExpenseItem>
         </Card>
     );
