@@ -11,7 +11,7 @@ export function ExpenseItem (props)
 
     //props are passed in from the parent component, ie the calling function, in this case App.js
 
-    const [title, setTitle] = useState(props.espenseInfo.title); //[pointer to stateObject, function to update stateObject]
+    const [title, setTitle] = useState(props.expenseInfo.title); //[pointer to stateObject, function to update stateObject]
 
     // let expenseTitle = props.expenseInfo.title;
 
