@@ -2,10 +2,12 @@ import React from "react";
 import './ExpenseForm.css';
 import { useState } from "react";
 
-export const ExpenseForm = () => {
+export const ExpenseForm = (props) => {
     const [titleInput, setTitleInput] = useState('');
     const [amountInput, setAmountInput] = useState('');
     const [dateInput, setDateInput] = useState('');
+
+
 
     //we can use one state object instead of 3 separate state objects,
     //but I like using the 3 tbh
@@ -79,6 +81,13 @@ export const ExpenseForm = () => {
 
         console.log(expenseData);
         console.log("Submit button clicked 1 ");
+        
+        props.onSaveExpenseData(expenseData); //passing data up to parent component
+        //onSaveExpenseData is a function passed in from the parent component in a prop.
+        //This is how we communicate up the component tree
+        //Simply put the parent hands the child a pointer to a function that the child can call
+        //to pass data up to the parent
+
         
         setTitleInput('');
         setAmountInput('');
