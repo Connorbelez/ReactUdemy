@@ -19,6 +19,7 @@ export function ExpenseItems (props)
     return (
         <div> 
  
+ 
             <Card className="expenses">
             <ExpensesFilter value={selectedYear} onFilterChange={addFilterHandler}/>
                 {/* <ExpenseItem
