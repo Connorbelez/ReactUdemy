@@ -3,24 +3,48 @@ import './ExpenseForm.css';
 import { useState } from "react";
 
 export const ExpenseForm = () => {
-    const [titleInput, setTitleInput] = useState('');
-    const [amountInput, setAmountInput] = useState('');
-    const [dateInput, setDateInput] = useState('');
+    // const [titleInput, setTitleInput] = useState('');
+    // const [amountInput, setAmountInput] = useState('');
+    // const [dateInput, setDateInput] = useState('');
+    //we can use one state object instead of 3 separate state objects,
+    //but I like using the 3 tbh
+    
+    const [userInput, setUserInput] = useState({
+        titleInput: '',
+        amountInput: '',
+        dateInput: '',
+    });
 
     const submitButtonHandler = (event) =>{
         console.log("Submit Button clicked");
     }
+
     const titleChangeHandler = (event) => {
-        setTitleInput(event.target.value);
-        console.log("titleInput: " + titleInput);
+        // userInputsetTitleInput(event.target.value);
+        // console.log("titleInput: " + titleInput);
+        setUserInput({
+            titleInput:userInput.titleInput,
+            amountInput:userInput.amountInput,
+            // ...userInput,
+            enteredTitle: event.target.value,
+        })
     }
+
     const amountChangeHandler = (event) => {
-        setAmountInput(event.target.value);
-        console.log("amountInput: " + amountInput);
+        setUserInput({
+            // titleInput:userInput.titleInput,
+            // amountInput:userInput.amountInput,
+            ...userInput,
+            enteredAmount: event.target.value,
+        })
     }
     const dateChangeHandler = (event) => {
-        setDateInput(event.target.value);
-        console.log("dateInput: " + dateInput);
+        setUserInput({
+            // titleInput:userInput.titleInput,
+            // amountInput:userInput.amountInput,
+            ...userInput,
+            eneteredDate: event.target.value,
+        })
     }
 
     return(
